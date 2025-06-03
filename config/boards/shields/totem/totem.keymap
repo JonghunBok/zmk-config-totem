@@ -3,7 +3,7 @@
 //                                                        ▄▀▀▀▄  ▄  ▄▀▀▀▄  ▄  ▄▀▀▀▄  █  ▄▀▀▀▄
 //                                                        █   █  █  █   █  █  █   █  █  █   █
 //                                                         ▀▀▀   █   ▀▀▀   █   ▀▀▀   ▀   ▀▀▀
-//                                                               █      ▄▄▄█▄▄▄    █   █  
+//                                                               █      ▄▄▄█▄▄▄    █   █
 //                                                               ▀      █  █  █     █▄█
 //                                                             ▀▀▀▀▀    █  █  █      ▀
 //                                                                      ▀  ▀  ▀
@@ -77,10 +77,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                      &kp Q       &kp W       &kp E        &kp R        &kp T            &kp Y        &kp U        &kp I      &kp O       &kp P
-                      &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G            &kp H        &mt RSHFT J  &mt K E    &mt RALT L  &mt RGUI SEMICOLON
-&kp NON_US_BACKSLASH  &kp Z       &kp X       &kp C        &kp V        &kp B            &kp N        &kp M        &kp COMMA  &kp DOT     &kp FSLH            &kp SINGLE_QUOTE
-                                              &kp TAB      &kp TAB      &lt NAV SPACE    &lt SYM RET  &kp BSPC     &kp BSPC
+               &kp Q       &kp W       &kp E        &kp R        &kp T            &kp Y        &kp U        &kp I      &kp O       &kp P
+               &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G            &kp H        &mt RSHFT J  &mt K E    &mt RALT L  &mt RGUI SEMICOLON
+&kp BACKSLASH  &kp Z       &kp X       &kp C        &kp V        &kp B            &kp N        &kp M        &kp COMMA  &kp DOT     &kp FSLH            &kp SINGLE_QUOTE
+                                       &kp TAB      &kp TAB      &lt NAV SPACE    &lt SYM RET  &kp BSPC     &kp BSPC
             >;
         };
 
