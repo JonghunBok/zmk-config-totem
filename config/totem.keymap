@@ -18,7 +18,6 @@
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 800  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 15    // default: 10
-
 #define BASE 0
 #define NAV  1
 #define SYM  2
@@ -41,9 +40,9 @@
             bindings = <&kp ESC>;
         };
 
-        efewf {
+        capslock {
             bindings = <&lt 4 CAPSLOCK>;
-            key-positions = <16 17 18>;
+            key-positions = <17 18>;
         };
     };
 
@@ -86,14 +85,12 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                          &kp Q       &kp W       &kp E        &kp R    &kp T            &kp Y        &kp U     &kp I        &kp O       &kp P
-                          &mt LGUI A  &mt LALT S  &mt LCTRL D  &kp F    &kp G            &kp H        &kp J     &mt RCTRL K  &mt RALT L  &mt RGUI SEMICOLON
-&mt LEFT_SHIFT BACKSLASH  &kp Z       &kp X       &kp C        &kp V    &kp B            &kp N        &kp M     &kp COMMA    &kp DOT     &kp FSLH            &mt RIGHT_SHIFT GRAVE
-                                                  &kp TAB      &kp TAB  &lt NAV SPACE    &lt SYM RET  &kp BSPC  &kp BSPC
+               &kp Q       &kp W       &kp E        &kp R             &kp T        &kp Y      &kp U              &kp I        &kp O       &kp P
+               &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G        &kp H      &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMICOLON
+&kp BACKSLASH  &kp Z       &kp X       &kp C        &kp V             &kp B        &kp N      &kp M              &kp COMMA    &kp DOT     &kp FSLH            &mt GRAVE APOSTROPHE
+                                       &kp TAB      &kp LEFT_SHIFT    &kp SPACE    &kp SPACE  &kp RETURN         &to 1
             >;
         };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         nav_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -112,40 +109,12 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &kp ESC    &bt BT_CLR  &kp UP        &kp EQUAL  &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
-              &kp LSHFT  &kp LEFT    &kp DOWN      &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp LEFT_ALT  &kp DEL    &kp PG_UP   &kp CAPS      &kp PG_DN  &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ASTERISK  &trans
-                                     &kp LEFT_GUI  &trans     &trans      &mo ADJ   &kp NUMBER_0  &trans
+        &kp ESC  &trans     &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
+        &trans   &kp LEFT   &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+&trans  &kp DEL  &kp PG_UP  &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ASTERISK  &trans
+                            &to 0     &trans     &trans      &mo 3     &kp NUMBER_0  &to 2
             >;
         };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-        sim_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "SYM";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃     !     ┃     @     ┃     #     ┃     $     ┃     %     ┃   ┃     ˆ     ┃     &     ┃     Ü     ┃     '     ┃     "     ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃     Ä     ┃           ┃    SZ     ┃           ┃           ┃   ┃   MUTE    ┃   YEN     ┃   EURO    ┃  POUND    ┃     Ö     ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃  EMAIL1   ┃  EMAIL2   ┃           ┃           ┃           ┃   ┃   VOL-    ┃   VOL+    ┃   LAST    ┃   NEXT    ┃     \     ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃    GIF    ┃    ADJ    ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
-            bindings = <
-        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-        &kp RA(A)     &trans        &kp RA(S)     &trans        &trans          &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)    &kp RA(N4)    &kp SINGLE_QUOTE
-&trans  &kp RA(F18)   &kp RA(F19)   &trans        &trans        &trans          &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV    &kp C_NEXT    &kp BSLH          &trans
-                                    &trans        &gif          &mo ADJ         &trans        &kp C_PP        &trans
-            >;
-        };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         adjust_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -167,7 +136,31 @@
         &sys_reset   &bt BT_CLR  &out OUT_TOG  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12
         &bootloader  &bt BT_NXT  &trans        &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &trans  &trans       &bt BT_PRV  &trans        &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                                 &trans        &trans  &trans    &trans  &trans  &trans
+                                 &to 0         &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        sim_layer {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+
+            label = "SYM";
+
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+            //             ┃     !     ┃     @     ┃     #     ┃     $     ┃     %     ┃   ┃     ˆ     ┃     &     ┃     Ü     ┃     '     ┃     "     ┃
+            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+            //             ┃     Ä     ┃           ┃    SZ     ┃           ┃           ┃   ┃   MUTE    ┃   YEN     ┃   EURO    ┃  POUND    ┃     Ö     ┃
+            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+            // ┃           ┃  EMAIL1   ┃  EMAIL2   ┃           ┃           ┃           ┃   ┃   VOL-    ┃   VOL+    ┃   LAST    ┃   NEXT    ┃     \     ┃           ┃
+            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+            //                                     ┃           ┃    GIF    ┃    ADJ    ┃   ┃           ┃           ┃           ┃
+            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+
+            bindings = <
+        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+        &kp RA(A)     &trans        &kp RA(S)     &trans        &trans          &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)    &kp RA(N4)    &kp SINGLE_QUOTE
+&trans  &kp RA(F18)   &kp RA(F19)   &trans        &trans        &trans          &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV    &kp C_NEXT    &kp BSLH          &trans
+                                    &to 0         &gif          &trans          &trans        &kp C_PP        &trans
             >;
         };
 
@@ -176,7 +169,7 @@
         &trans     &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans       &trans          &trans        &trans  &trans  &trans
         &mkp LCLK  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK    &trans          &trans        &trans  &trans  &trans
 &trans  &mkp LCLK  &trans          &trans          &trans           &trans       &trans          &trans        &trans  &trans  &trans  &trans
-                                   &msc SCRL_DOWN  &msc SCRL_DOWN   &mkp MCLK    &msc SCRL_DOWN  &msc SCRL_UP  &trans
+                                   &trans          &trans           &mkp MCLK    &msc SCRL_DOWN  &msc SCRL_UP  &trans
             >;
         };
     };
