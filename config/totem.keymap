@@ -85,10 +85,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-               &kp Q       &kp W       &kp E           &kp R             &kp T          &kp Y       &kp U              &kp I        &kp O       &kp P
-               &mt LGUI A  &mt LALT S  &mt LCTRL D     &mt LEFT_SHIFT F  &kp G          &kp H       &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMICOLON
-&kp BACKSLASH  &kp Z       &kp X       &kp C           &kp V             &kp B          &kp N       &kp M              &kp COMMA    &kp DOT     &kp FSLH            &mt GRAVE APOSTROPHE
-                                       &kp LEFT_SHIFT  &kp TAB           &lt 1 SPACE    &kp RETURN  &kp BACKSPACE      &to 1
+               &kp Q       &kp W       &kp E        &kp R             &kp T          &kp Y        &kp U              &kp I        &kp O       &kp P
+               &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G          &kp H        &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMICOLON
+&kp BACKSLASH  &kp Z       &kp X       &kp C        &kp V             &kp B          &kp N        &kp M              &kp COMMA    &kp DOT     &kp FSLH            &mt GRAVE APOSTROPHE
+                                       &tog 4       &kp TAB           &lt 1 SPACE    &lt 2 ENTER  &kp BACKSPACE      &to 1
             >;
         };
 
@@ -169,8 +169,9 @@
         &trans     &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans       &trans          &trans        &trans  &trans  &trans
         &mkp LCLK  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK    &trans          &trans        &trans  &trans  &trans
 &trans  &mkp LCLK  &trans          &trans          &trans           &trans       &trans          &trans        &trans  &trans  &trans  &trans
-                                   &trans          &trans           &mkp MCLK    &msc SCRL_DOWN  &msc SCRL_UP  &trans
+                                   &to 0           &trans           &mkp MCLK    &msc SCRL_DOWN  &msc SCRL_UP  &trans
             >;
         };
     };
 };
+
